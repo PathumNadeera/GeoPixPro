@@ -1,0 +1,1726 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProCleaning</title>
+    <link rel="icon" href="https://res.cloudinary.com/dzmvext6p/image/upload/v1729407060/Research/ww4fn3rspkyzkmsmparm.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&amp;display=swap">
+    <style>
+      body {
+        margin: 0;
+        font-family: "Noto Sans", sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        border: none;
+        --color: rgba(30, 30, 30);
+        --bgColor: rgb(222, 238, 243);
+        --primaryColor: #02b2de;
+        --secondaryColor: #2275ac;
+        --highlightColor: #369ee4;
+        --shadowColor: rgba(0, 0, 0, 0.1);
+        --cardBorderColor: #d3c6c6;
+        --videoBorderColor: #d3c6c6;
+        --buttonHoverColor: #14758d;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+  
+      header,
+      footer {
+        background-color: #369ee4;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 0.5em;
+        box-shadow: 0 4px 6px var(--shadowColor);
+        transition: all 0.3s ease;
+      }
+  
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+  
+      header.expanded {
+        height: auto;
+      }
+  
+      header:hover {
+        background-color: #0f82d0;
+        color: white;
+      }
+  
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 10px;
+        transition: all 0.3s ease;
+      }
+  
+      nav a:hover {
+        color: #555;
+        border-radius: 5px;
+        background-color: white;
+        color: var(--highlightColor);
+      }
+  
+      main {
+        flex: 1;
+        padding: 70px 20px 20px;
+        box-sizing: border-box;
+        color: var(--color);
+        background: rgb(239 244 248);
+        max-width: 100%;
+      }
+
+      #home {
+        position: relative;
+        background-image: url('https://res.cloudinary.com/dzmvext6p/image/upload/v1729428009/Research/v4h8dczsgasdk4ep0dqv.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+
+      #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 70%);
+        z-index: 1; 
+      }
+
+      #home > * {
+        position: relative;
+        z-index: 2; 
+      }
+  
+      section {
+        padding-top: 70px;
+      }
+  
+      
+      .home {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 40px;
+        margin-top: -68px;
+      }
+      .home p{
+        font-size: 20px;
+      }
+  
+      .card-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+  
+      .card {
+        background-color: white;
+        border-radius: 15px;
+        border: 2px solid var(--cardBorderColor);
+        box-shadow: 0 4px 8px var(--shadowColor);
+        padding: 15px;
+        margin: 10px;
+        width: 225px;
+        box-sizing: border-box;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+      .card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      }
+  
+      .card h3 {
+        margin-top: 0;
+        font-size: 16px;
+      }
+  
+      .card p {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+  
+      .card img {
+        width: auto;
+        height: 175px;
+        object-fit: cover;
+        border-radius: 8px;
+        max-width: 100%;
+      }
+  
+      .card button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: var(--highlightColor);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+  
+      .card button:hover {
+        background-color: var(--buttonHoverColor);
+      }
+  
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: var(--buttonHoverColor);
+        border-color: aquamarine;
+      }
+  
+      .header-section {
+        font-size: 50px;
+        text-align: center;
+      }
+
+      #introduction p{
+        max-width: 1350px;
+        text-align: justify;
+        padding: 51px;
+        margin-top: -51px;
+      }
+
+
+      .header-sub-section {
+        padding: 50px;
+        font-size: 25px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .literature-survey {
+        max-width: 1350px;
+        text-align: justify;
+        padding: 51px;
+        margin-top: -59px;
+        line-height: 1.6;
+      }
+
+      .Research_Gap{
+        max-width: 1350px;
+        text-align: justify;
+        padding: 51px;
+        margin-top: -59px;
+        line-height: 1.6;
+      }
+
+      .Research_Problem{
+        max-width: 1350px;
+        text-align: justify;
+        padding: 51px;
+        margin-top: -59px;
+        line-height: 1.6;
+      }
+
+      .Research_Objectives{
+        max-width: 1350px;
+        text-align: justify;
+        padding: 51px;
+        margin-top: -59px;
+        line-height: 1.6;
+      }
+
+      .Domain{
+        max-width: 1350px;
+        text-align: justify;
+        padding: 51px;
+        margin-top: -59px;
+        line-height: 1.6;
+      }
+
+  
+      .footer {
+        background-color: var(--highlightColor);
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        text-decoration: none;
+      }
+  
+      .column {
+        flex: 1;
+        margin: 0 10px;
+      }
+  
+      .footer-image {
+        max-width: 359px;
+        margin: auto;
+        width: 366px;
+        margin-top: 31px;
+      }
+  
+      .footer-title {
+        font-size: 20px;
+        color: white;
+      }
+  
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+  
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+  
+      .footer-links a {
+        text-decoration: none;
+        color: white;
+      }
+  
+      .footer-links a:hover {
+        color: #000;
+      }
+  
+      .nav-parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .nav-childer1 img {
+        margin-right: 5px;
+        width: 170px;
+        padding-left: 16px;
+      }
+  
+      .nav-childer2 {
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+  
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: auto;
+      }
+  
+      .hamburger div {
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin: 3px 0;
+      }
+  
+      @media (max-width: 768px) {
+        .nav-parent {
+          flex-direction: row;
+          align-items: center;
+        }
+  
+        .nav-childer1 img {
+          display: none;
+        }
+  
+        .nav-childer2 {
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+        }
+  
+        .hamburger {
+          display: flex;
+          margin-right: 20px;
+        }
+  
+        .nav-childer2.hide {
+          display: none;
+        }
+  
+        .nav-childer2.show {
+          display: flex;
+        }
+  
+        .card {
+          width: calc(50% - 20px);
+        }
+      }
+  
+      @media (max-width: 480px) {
+        .header-section {
+          font-size: 30px;
+        }
+  
+        .header-sub-section {
+          font-size: 20px;
+        }
+  
+        .card img {
+          height: 100px;
+        }
+  
+        .card h3 {
+          font-size: 14px;
+        }
+  
+        .card button {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+  
+        .hamburger {
+          margin-right: 20px;
+        }
+  
+        .card {
+          width: calc(100% - 20px);
+        }
+      }
+  
+      .timeline {
+        --color: rgba(30, 30, 30);
+        --bgColor: rgb(255, 255, 255);
+        --col-gap: 2rem;
+        --row-gap: 4rem;
+        --line-w: 0.25rem;
+        color: var(--color);
+        background: var(--bgColor);
+      }
+  
+      .timeline ul {
+        display: grid;
+        grid-template-columns: var(--line-w) 1fr;
+        grid-auto-columns: max-content;
+        column-gap: var(--col-gap);
+        list-style: none;
+        width: min(60rem, 90%);
+        margin-inline: auto;
+        position: relative;
+      }
+  
+      .timeline ul::before {
+        content: "";
+        grid-column: 1;
+        grid-row: 1 / span 20;
+        background: rgb(255, 255, 255);
+        border-radius: calc(var(--line-w) / 2);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: var(--line-w);
+        z-index: -1;
+      }
+  
+      .timeline ul li:not(:last-child) {
+        margin-bottom: var(--row-gap);
+      }
+  
+      .timeline ul li {
+        grid-column: 2;
+        --inlineP: 1.5rem;
+        margin-inline: var(--inlineP);
+        grid-row: span 2;
+        display: grid;
+        grid-template-rows: min-content min-content min-content;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+  
+      .timeline ul li.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      .timeline ul li .date {
+        --dateH: 3rem;
+        height: var(--dateH);
+        margin-inline: calc(var(--inlineP) * -1);
+        text-align: center;
+        background-color: var(--accent-color);
+        color: rgb(255, 255, 255);
+        font-size: 1.25rem;
+        font-weight: 700;
+        display: grid;
+        place-content: center;
+        position: relative;
+        border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+      }
+  
+      .timeline ul li .date::before {
+        content: "";
+        width: var(--inlineP);
+        aspect-ratio: 1;
+        background: var(--accent-color);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+        position: absolute;
+        top: 100%;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        right: 0;
+      }
+  
+      .timeline ul li .date::after {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        aspect-ratio: 1;
+        background: var(--bgColor);
+        border: 0.3rem solid var(--accent-color);
+        border-radius: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+      }
+  
+      .timeline ul li .title,
+      .timeline ul li .descr {
+        background: var(--bgColor);
+        position: relative;
+        padding-inline: 1.5rem;
+      }
+  
+      .timeline ul li .title {
+        overflow: hidden;
+        padding-block-start: 1.5rem;
+        padding-block-end: 1rem;
+        font-weight: 500;
+      }
+  
+      .timeline ul li .descr {
+        padding-block-end: 1.5rem;
+        font-weight: 300;
+      }
+  
+      .timeline ul li .title::before,
+      .timeline ul li .descr::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 0.5rem;
+        background: rgba(0, 0, 0, 0.5);
+        left: 50%;
+        border-radius: 50%;
+        filter: blur(4px);
+        transform: translate(-50%, 50%);
+      }
+  
+      .timeline ul li .title::before {
+        bottom: calc(100% + 0.125rem);
+      }
+  
+      .timeline ul li .descr::before {
+        z-index: -1;
+        bottom: 0.25rem;
+      }
+  
+      @media (min-width: 40rem) {
+        .timeline ul {
+          grid-template-columns: 1fr var(--line-w) 1fr;
+        }
+  
+        .timeline ul::before {
+          grid-column: 2;
+        }
+  
+        .timeline ul li:nth-child(odd) {
+          grid-column: 1;
+        }
+  
+        .timeline ul li:nth-child(even) {
+          grid-column: 3;
+        }
+  
+        .timeline ul li:nth-child(2) {
+          grid-row: 2/4;
+        }
+  
+        .timeline ul li:nth-child(odd) .date::before {
+          clip-path: polygon(0 0, 100% 0, 100% 100%);
+          left: 0;
+        }
+  
+        .timeline ul li:nth-child(odd) .date::after {
+          transform: translate(-50%, -50%);
+          left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+        }
+  
+        .timeline ul li:nth-child(odd) .date {
+          border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+        }
+      }
+  
+      .img-container {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .img-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+  
+      #introduction,
+      #domain,
+      #milestones,
+      #documents,
+      #tools,
+      #team,
+      #contact {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      #introduction img {
+        display: block;
+        margin: 20px auto 0;
+        width: 500px;
+        height: auto;
+      }
+  
+      #domain img {
+        display: block;
+        margin: 20px auto 0;
+        width: 500px;
+        height: auto;
+      }
+  
+      .contact-form-container {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      .form-group {
+        margin-bottom: 15px;
+      }
+  
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+  
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+  
+      .btn-primary {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+      }
+  
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+  
+      @media (max-width: 600px) {
+        .contact-form-container {
+          padding: 15px;
+        }
+  
+        .btn-primary {
+          width: 100%;
+          padding: 12px;
+        }
+      }
+  
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+  
+      .video-container video {
+        width: 100%;
+        padding: 1px;
+        border: 2px solid var(--cardBorderColor);
+        max-width: 800px;
+        border-radius: 10px;
+      }
+  
+      .no-change {
+        color: inherit;
+        text-decoration: none;
+      }
+  
+      .no-change:visited {
+        color: inherit;
+      }
+  
+      .image-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+  
+      .image-row img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      @media (max-width: 768px) {
+        .image-row img {
+          max-width: 200px;
+        }
+      }
+  
+      @media (max-width: 480px) {
+        .image-row img {
+          max-width: 150px;
+        }
+      }
+  
+      .centered-list {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: -57px;
+      }
+  
+      .centered-list ul {
+        max-width: 989px;
+        margin-left: -37px;
+      }
+  
+      .centered-list ul li {
+        margin-bottom: 20px;
+        max-width: 1143px;
+        text-align: justify;
+        line-height: 1.5;
+      }
+  
+      .sublist {
+        list-style-type: circle;
+        font-style: italic;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+  
+      .sublist li {
+        margin-bottom: 10px;
+      }
+  
+      .retinal-image {
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      .method-image {
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+  
+      /* Loading Screen Styles */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        animation: fadeOut 1s forwards;
+        animation-delay: 2s;
+      }
+  
+      #loading-screen img {
+        width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+        animation: bounce 2s infinite;
+      }
+  
+      #loading-screen p {
+        font-size: 1.5rem;
+        color: var(--primaryColor);
+        animation: pulse 1s infinite;
+      }
+  
+      .loader {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top: 4px solid var(--primaryColor);
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
+        margin-top: 20px;
+      }
+  
+      @keyframes bounce {
+  
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+  
+        40% {
+          transform: translateY(-30px);
+        }
+  
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+  
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+  
+        50% {
+          opacity: 0.5;
+        }
+  
+        100% {
+          opacity: 1;
+        }
+      }
+  
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+  
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+  
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  
+  <body data-new-gr-c-s-check-loaded="14.1202.0" data-gr-ext-installed="">
+    <div id="loading-screen" style="display: none;">
+      <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729402018/Research/v1qzdsyofbrawiw3yexb.png" alt="Logo">
+      <p>Loading Please Wait ...</p>
+      <div class="loader"></div>
+    </div>
+    <header>
+      <nav>
+        <div class="nav-parent">
+          <div class="nav-childer1">
+            <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729402637/Research/o9ynughknat9tv5aclzi.png" alt="Logo">
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="nav-childer2 show">
+            <a href="#home">Home</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#domain">Domain</a>
+            <a href="#milestones">Milestones</a>
+            <a href="#documents">Documents</a>
+            <a href="#tools">Tools and Technologies</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="home">
+          <h2>Cleaning Cervice</h2>
+          <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729402810/Research/n9iovakwfgzo3qj9h4sz.png" alt="Logo" style="width: 387px;height: auto;margin-top: -20px;">
+          <p>We provide Performing cleaning tasks using the least amount of time, energy, and money.</p>
+        </div>
+        <div class="video-container">
+          <video controls="" autoplay="" loop="" muted="">
+            <source src="https://res.cloudinary.com/dzmvext6p/video/upload/v1729408555/Research/bg8ziofab2c6tiqhhsqq.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <br>
+        <br>
+      </section>
+      
+  
+      <section id="introduction">
+        <h1 class="header-section">Introduction</h1>
+        <p>
+          In today's fast-paced world, cleaning service companies play a crucial role in maintaining both residential and commercial spaces. However, traditional manual labor processes can lead to inefficiencies and operational challenges. To address these issues, we are harnessing the power of artificial intelligence to automate and optimize key aspects of the cleaning process.
+          <br><br>Our AI-powered system introduces advanced features designed to streamline cleaning services. By accurately predicting service costs and estimating task durations based on factors like area size and room count, we reduce the need for manual input and deliver greater accuracy. Additionally, our object detection capabilities ensure specialized cleaning needs are identified, allowing our teams to deploy the right equipment effortlessly.
+          <br><br>One of the standout features is our workload balancing function, which uses real-time data and employee profiles to distribute tasks more efficiently—enhancing productivity and ensuring superior results. With these innovations, we are setting a new standard for efficiency and convenience in the cleaning industry.
+
+        </p>
+        <div class="img-container">
+          <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729522440/Research/hudtxf1pncyfm9rsr69n.jpg" alt="Eye and Retina">
+        </div>
+      </section>
+
+
+      <section id="domain">
+        <h1 class="header-section">Domain</h1>
+        <div class="Domain">
+          <p>
+            Cleaning Management System (CMS) is an integrated platform designed to optimize and enhance the efficiency of cleaning operations in various sectors, 
+            including facility management, hospitality, and healthcare. The system employs advanced artificial intelligence (AI) methodologies to automate 
+            labor-intensive tasks, streamline resource allocation, and improve service delivery.
+          </p>
+        </div>
+
+
+        <p>
+          <br>
+        </p><div class="centered-list">
+          <ul>
+            <li>
+              <strong>Cost Prediction:</strong><br> This module provides accurate cost estimates for cleaning services by analyzing user inputs such as area size, type 
+              of flooring, and number of rooms. By utilizing data from various cleaning scenarios, the system can dynamically calculate costs without the need for 
+              manual adjustments. This ensures transparency and helps customers make informed decisions.
+
+              <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729521651/Research/beepnpz4rsfqk4rr8uxc.jpg" alt="Diabetic Macular Edema" class="retinal-image">
+            </li>
+            <li>
+              <strong>Special Case Detection:</strong><br> Utilizing state-of-the-art object detection techniques like YOLOv5, this feature identifies unique cleaning 
+              scenarios requiring specialized tools or chemicals. By analyzing images uploaded by users, the system can recommend appropriate equipment and cleaning 
+              agents for specific tasks, ensuring that employees are well-prepared for any situation.
+
+              <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729521390/Research/ecfif5mc3vxoeidr3nva.jpg" alt="Choroidal Neovascularization" class="retinal-image">
+            </li>
+            <li>
+              <strong>Time Estimation:</strong><br> This component leverages deep learning models, particularly LSTM and GRU, to predict the time required for cleaning 
+              tasks based on various factors such as area size, room count, and cleanliness level. This allows for more accurate scheduling and enhances operational 
+              efficiency by minimizing downtime.
+
+              <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729521326/Research/poltrvsshltqgy7mt1cn.png" alt="Age-Related Macular Degeneration" class="retinal-image">
+            </li>
+            <li>
+              <strong>Workload Distribution:</strong><br> The system intelligently balances workloads among cleaning staff by analyzing real-time data, employee profiles, 
+              and task complexity. Utilizing algorithms such as Genetic Algorithms (GA) and Particle Swarm Optimization (PSO), it ensures that tasks are allocated 
+              based on skill levels and current workloads, promoting a more effective and harmonious working environment.
+              <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729522171/Research/swmefqrthqyxaqi1a32b.jpg" alt="Diabetic Retinopathy" class="retinal-image">
+            </li>
+          </ul>
+        </div>
+        <p></p>
+        <div class="header-sub-section">Literature Survey</div>
+        <div class="literature-survey">
+          <p>
+            The use of Artificial Intelligence (AI) in cleaning management systems has gained significant attention as a means to overcome the inefficiencies associated 
+            with traditional, labor-intensive cleaning operations. Research in AI-driven solutions highlights their potential to optimize various aspects such as cost
+            prediction, time estimation, object detection, and workload balancing. AI-based cost prediction models, often used in industries like construction and 
+            manufacturing, can improve accuracy by analyzing historical data without manual input. Similarly, deep learning models, such as Long Short-Term Memory
+              (LSTM) networks, have been effective in time estimation tasks by evaluating multiple variables, such as room size and task complexity. Object detection, 
+              particularly through YOLOv5 architecture, has been applied to detect specific cleaning challenges, ensuring the appropriate allocation of tools and 
+              resources. Furthermore, workload balancing, driven by machine learning, ensures fair distribution of tasks based on real-time data and employee profiles, 
+              thereby enhancing efficiency and employee satisfaction. Collectively, these AI-driven methodologies have demonstrated the potential to revolutionize 
+              cleaning management by increasing accuracy, reducing costs, and improving labor efficiency.
+          </p>
+        </div> 
+        <div class="header-sub-section">Research Gap</div>
+        <div class="Research_Gap">
+          <p>
+            Despite the growing integration of AI in various industries, the cleaning sector still faces significant challenges in applying these technologies 
+            effectively. Current AI-driven solutions in the industry tend to focus on individual components, such as object detection or time estimation, but lack 
+            comprehensive systems that integrate all aspects of cleaning operations. There is a gap in developing a unified platform that combines accurate cost 
+            prediction, time estimation, workload balancing, and special object detection, which are critical for improving operational efficiency in commercial, 
+            industrial, and residential cleaning environments.<br><br>
+            Existing solutions for cost prediction often rely on manual processes and static data, requiring constant updates and recalculations whenever market 
+            conditions change. This not only increases the workload but also introduces potential for human error. Similarly, current time estimation models fail to
+            account for the dynamic nature of cleaning tasks, such as varying room layouts, surface types, and object density, leading to imprecise estimates. Most 
+            existing models are not adaptive to real-time changes in the environment, which limits their effectiveness.<br><br>
+            Additionally, a significant gap remains in the use of advanced object detection technologies to identify and handle special items, such as delicate furniture
+            or valuable objects, that require special care during cleaning. While object detection algorithms are widely used in fields like security and healthcare, 
+            their application in the cleaning industry is underdeveloped. This research seeks to address these gaps by creating an integrated AI system that automates 
+              prediction, time estimation, and object detection. The system will not only streamline operations but also enhance service quality by ensuring that special 
+              objects are handled with care, improving customer satisfaction and operational efficiency.
+
+          </p>
+        </div>
+
+        <div class="header-sub-section">Research Problem</div>
+        <div class="Research_Problem">
+          <p>
+            The cleaning industry is at a crucial point of transformation, driven by the increasing use of AI technologies to enhance operational efficiency, 
+            accuracy, and customer satisfaction. Despite advancements in other sectors, the cleaning industry still faces challenges in fully utilizing AI for 
+            critical tasks such as cost prediction, time estimation, and detecting special objects that require careful handling during cleaning. Traditional methods, 
+            such as manual cost calculations, on-site inspections for time estimates, and basic machine learning models, are labor-intensive, prone to errors, and 
+            inefficient in addressing these complexities.<br><br>
+            This research addresses these challenges by developing an integrated AI-driven cleaning management system that incorporates advanced techniques such as 
+            Artificial Neural Networks (ANNs) for dynamic cost prediction, LSTM and GRU models for precise time estimation, and AI-powered object detection for 
+            identifying fragile or specialized items requiring specific cleaning methods. The goal is to create a unified, automated solution that not only reduces the 
+            need for manual interventions but also significantly improves the accuracy and efficiency of cleaning operations. By automating and optimizing these 
+            processes, the system aims to provide modern businesses with a more efficient and adaptable approach to cleaning management.
+          </p>
+        </div>
+
+        <div class="header-sub-section">Research Objectives</div>
+        <div class="Research_Objectives">
+          <p>
+            The main objective of this research is to develop and implement an integrated AI-driven cleaning 
+              management system that optimizes core operational aspects of the cleaning industry, with a focus 
+              on efficient task distribution, cost prediction, time estimation, and special object detection. This 
+              system aims to bridge existing gaps in these areas by leveraging advanced AI technologies, 
+              ultimately enhancing efficiency, accuracy, and customer satisfaction. The specific objectives are 
+              as follows:
+          </p>
+        </div>
+        <br>
+        <div class="centered-list">
+          <ul>
+            <li>Develop an AI-driven workload balancing system using Genetic Algorithms (GA) and Particle Swarm Optimization (PSO) for efficient task distribution and resource utilization.</li>
+            <li>Create an AI-based cost prediction model with Artificial Neural Networks (ANNs) that adapts to market changes and automates pricing based on cleaning scenarios.</li>
+            <li>Design an AI-powered time estimation model utilizing LSTM and GRU networks to predict cleaning times accurately from customer data and blueprints.</li>
+            <li>Implement a special object detection system that uses AI to identify and provide handling instructions for delicate or valuable items during cleaning tasks.</li>
+            
+          </ul>
+        </div>
+  
+        <div class="header-sub-section">Methodology</div>
+        <div class="Research_Objectives">
+          <p>
+            In this research, the Cleaning Management System (CMS) is developed with four essential, interlinked components: Cost Prediction, Special Case Detection, 
+            Time Estimation, and Workload Distribution. Together, these components work in synergy to optimize and streamline the entire cleaning service process, 
+            enhancing both operational efficiency and customer satisfaction.
+
+          </p>
+        </div>
+        <br>
+        <div class="centered-list">
+          <ul>
+            <li><strong>Cost Prediction</strong> - <br><br>The system gathers text-based input from users, such as floor type, number of rooms, and floor area. Customers also have the option to upload a 
+              blueprint, from which the system extracts pixel-based measurements using the Keras-OCR library to determine the floor area. Preprocessing is 
+               using Imutils and OpenCV. The cost model is trained using data from various cleaning service companies, with input features standardized using 
+               StandardScaler and reshaped via NumPy. The neural network architecture utilizes LSTM and GRU layers, optimized using Adam and categorical cross-entropy 
+               to predict cleaning service costs.
+            </li>
+            <li><strong>Special Case Detection</strong> - <br><br>For special cleaning cases (e.g., wooden furniture or heavy dirt), the system uses a combination of Region-based CNN (RCNN) and YOLOv5 for object 
+              detection and localization. Facility cameras capture images that are processed to identify such cases, and the system recommends appropriate 
+              cleaning tools and chemicals for the job.
+            </li>
+            <li><strong>Time Estimation</strong> - <br><br>Time prediction leverages AI models to estimate the duration of cleaning tasks based on input data such as area size and room count, 
+              processed via OpenCV. The model employs LSTM and GRU layers to capture temporal patterns, and the system is validated and optimized using Adam 
+              optimizer and categorical cross-entropy.
+            </li>
+            <li><strong>Workload Distribution</strong> - <br><br>This component ensures an optimal distribution of tasks among employees, using real-time data and historical analysis. Genetic Algorithms (GA) and Particle Swarm Optimization (PSO) are utilized to balance workloads, 
+              considering factors like employee skill and current assignments. This dynamic system can be integrated with existing management software for real-time adjustments, 
+              enhancing operational efficiency.</li>
+          </ul>
+        </div>
+  
+  
+        <br>
+        <br>
+        <div class="image-row">
+          <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729505253/Research/hym2ujngxhp3txhxccwj.jpg" alt="Cleaning">
+          <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729507358/Research/qyw28azn8lrnldhhcogu.jpg" alt="Cleaning">
+          <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729505243/Research/mnkxichu1ijrawozfhbx.jpg" alt="Cleaning">
+        </div>
+      </section>
+  
+      <section id="milestones">
+        <h1 class="header-section">Milestones</h1>
+        <br>
+        <div class="timeline">
+          <ul>
+            <li style="--accent-color: #003f5c" class="">
+              <div class="date">31 October 2023</div>
+              <div class="title">Brainstorming workshop</div>
+            </li>
+            <li style="--accent-color: #2f4b7c" class="">
+              <div class="date">08 December 2023</div>
+              <div class="title">Group registration</div>
+            </li>
+            <li style="--accent-color: #665191" class="">
+              <div class="date">18 January 2024</div>
+              <div class="title">Topic Assessment Form (TAF)</div>
+            </li>
+            <li style="--accent-color: #a05195" class="">
+              <div class="date">19 February 2024</div>
+              <div class="title">Project charter</div>
+            </li>
+            <li style="--accent-color: #d45087" class="">
+              <div class="date">29 February 2024</div>
+              <div class="title">Proposal reports (draft)</div>
+            </li>
+            <li style="--accent-color: #f95d6a" class="">
+              <div class="date">21 February 2024</div>
+              <div class="title">Proposal presentation</div>
+            </li>
+            <li style="--accent-color: #ff7c43" class="">
+              <div class="date">29 February 2024</div>
+              <div class="title">Proposal reports (final-for marking)</div>
+            </li>
+            <li style="--accent-color: #ffa600" class="">
+              <div class="date">6-8 May 2024</div>
+              <div class="title">Progress Presentation I</div>
+            </li>
+            <li style="--accent-color: #003f5c" class="">
+              <div class="date">6 May 2024</div>
+              <div class="title">Status document I</div>
+            </li>
+            <li style="--accent-color: #2f4b7c" class="">
+              <div class="date">14 June 2024</div>
+              <div class="title">Research paper</div>
+            </li>
+            <li style="--accent-color: #665191" class="">
+              <div class="date">24 August 2024</div>
+              <div class="title">Final reports</div>
+            </li>
+            <li style="--accent-color: #a05195" class="">
+              <div class="date">9-11 September 2024</div>
+              <div class="title">Progress Presentation II</div>
+            </li>
+            <li style="--accent-color: #d45087" class="">
+              <div class="date">11 September 2024</div>
+              <div class="title">Status document II</div>
+            </li>
+            <li style="--accent-color: #f95d6a" class="">
+              <div class="date">1 November 2024</div>
+              <div class="title">Research paper registration notification</div>
+            </li>
+            <li style="--accent-color: #ff7c43" class="">
+              <div class="date">28-30 October 2024</div>
+              <div class="title">Final presentation &amp; VIVA</div>
+            </li>
+            <li style="--accent-color: #ffa600" class="">
+              <div class="date">21 October 2024</div>
+              <div class="title">Project website</div>
+            </li>
+            <li style="--accent-color: #003f5c" class="">
+              <div class="date">20 November 2024</div>
+              <div class="title">Research logbook</div>
+            </li>
+            <li style="--accent-color: #2f4b7c" class="">
+              <div class="date">2 December 2024</div>
+              <div class="title">Final Report (proofread)</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="documents">
+        <div class="container">
+          <h1 class="header-section">Documents</h1>
+          <div class="header-sub-section">Project Proposal</div>
+          <center>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Proposal Presentation - Team</h3>
+                <button id="proposal_Team" fdprocessedid="aanma8">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Proposal Document - IT21073496</h3>
+                <button id="proposal_IT21073496" fdprocessedid="6ooybk">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Proposal Document - IT21061448</h3>
+                <button id="proposal_IT21061448" fdprocessedid="fd2vme">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Proposal Document - IT21072260</h3>
+                <button id="proposal_IT21072260" fdprocessedid="e8909b">View</button>
+              </div>
+            </div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Proposal Document - IT21038600</h3>
+                <button id="proposal_IT21038600" fdprocessedid="1t23yc">View</button>
+              </div>
+            </div>
+            <br>
+            <div class="header-sub-section">Status Document 01</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21073496 - Status 01</h3>
+                <button id="status_IT21073496" fdprocessedid="2bjts">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21061448 - Status 01</h3>
+                <button id="status_IT21061448" fdprocessedid="e3t8la">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21072260 - Status 01</h3>
+                <button id="status_IT21072260" fdprocessedid="bkjze6">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21038600 - Status 01</h3>
+                <button id="status_IT21038600" fdprocessedid="qu5bt9">View</button>
+              </div>
+            </div>
+            <br>
+            <div class="header-sub-section">Progress Presentation 01</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Progress Presentation 01</h3>
+                <button id="progress_presentation_01" fdprocessedid="0vrgv">View</button>
+              </div>
+            </div>
+            <br>
+            <div class="header-sub-section">Research Paper</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Research Paper</h3>
+                <button id="research_paper" fdprocessedid="8rw77j">View</button>
+              </div>
+            </div>
+            <br>
+            <div class="header-sub-section">Progress Presentation 02</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Progress Presentation 02</h3>
+                <button id="progress_presentation_02" fdprocessedid="kt461">View</button>
+              </div>
+              <!-- <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Poster</h3>
+                <br>
+                <button id="poster_design" fdprocessedid="gk00jo">View</button>
+              </div> -->
+            </div>
+            <br>
+            <div class="header-sub-section">Final Reports</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Final Report - <br>Team</h3>
+                <button id="final_report" fdprocessedid="e73rf5">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Final Report - IT21073496</h3>
+                <button id="final_report_IT21073496" fdprocessedid="fg5kts">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Final Report - IT21061448</h3>
+                <button id="final_report_IT21061448" fdprocessedid="gvd38j">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Final Report - IT21072260</h3>
+                <button id="final_report_IT21072260" fdprocessedid="bf21wi">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+              <h3>Final Report - IT21038600</h3>
+              <button id="final_report_IT21038600" fdprocessedid="bgdago">View</button>
+            </div>
+            <br>
+            <!-- <div class="header-sub-section">Log Books</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Log Book - pathum</h3>
+                <button id="log_book_IT21073496" fdprocessedid="pklh3b">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Log Book - thiranya</h3>
+                <button id="log_book_IT21073496" fdprocessedid="g2gim">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Log Book - sithmi</h3>
+                <button id="log_book_IT21073496" fdprocessedid="8frgw3">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Log Book - rajitha</h3>
+                <button id="log_book_IT21073496" fdprocessedid="5dnb4">View</button>
+              </div>
+            </div> -->
+            <br>
+            <div class="header-sub-section">Status Document 02</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21073496 - Status 02</h3>
+                <button id="status_IT21073496_02" fdprocessedid="ddl7su">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21061448 - Status 02</h3>
+                <button id="status_IT21061448_02" fdprocessedid="aegw1">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21072260 - Status 02</h3>
+                <button id="status_IT21072260_02" fdprocessedid="j6ao2r">View</button>
+              </div>
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>IT21038600 Status 02</h3>
+                <button id="status_IT21038600_02" fdprocessedid="bgm9md">View</button>
+              </div>
+            </div>
+            <br>
+            <div class="header-sub-section">Project Registration Documents</div>
+            <div class="card-row">
+              <div class="card">
+                <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718376694/pdf-icon-png-2082_bnxryb.png" width="80" alt="pdf word icon">
+                <h3>Topic Assessment</h3>
+                <br>
+                <button id="taf_team" fdprocessedid="44ceyg">View</button>
+              </div>
+            </div>
+          </center>
+        </div>
+      </section>
+      <section id="tools">
+        <h1 class="header-section">Tools and Technologies</h1>
+        <div class="card-row">
+          <div class="card">
+            <br>
+            <div class="img-container">
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718254374/Flask_logo_jny46h.svg" alt="Flask">
+            </div>
+            <br>
+            <h3>Flask</h3>
+          </div>
+          
+          <div class="card">
+            <br>
+            <div class="img-container">
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718254291/Tensorflow_logo_tlnnli.svg" alt="TensorFlow">
+            </div>
+            <br>
+            <h3>TensorFlow</h3>
+          </div>
+          
+          <div class="card">
+            <br>
+            <div class="img-container">
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718253788/w3_html5-ar21_hu9p6q.svg" alt="HTML">
+            </div>
+            <br>
+            <h3>HTML</h3>
+          </div>
+          <div class="card">
+            <br>
+            <div class="img-container">
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718253814/w3_css-ar21_jjqqll.svg" alt="CSS">
+            </div>
+            <br>
+            <h3>CSS</h3>
+          </div>
+          <div class="card">
+            <br>
+            <div class="img-container">
+              <br>
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718253572/Python_logo_51_ebukoc.svg" alt="Python">
+            </div>
+            <br>
+            <h3>Python</h3>
+          </div>
+          
+          <div class="card">
+            <br>
+            <div class="img-container">
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718253134/OpenCV_Logo_with_text_svg_version_tnq5fi.svg" alt="OpenCV">
+            </div>
+            <br>
+            <h3>OpenCV</h3>
+          </div>
+          <div class="card">
+            <br>
+            <div class="img-container">
+              <img src="https://res.cloudinary.com/dgxqj7ivx/image/upload/v1718253076/Keras_logo_vqxehh.svg" alt="Keras">
+            </div>
+            <br>
+            <h3>Keras</h3>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="team">
+        <h1 class="header-section">Team</h1>
+        <div class="card-row">
+          <div class="card">
+            <h3>Nadeera A.A.D.P</h3>
+            <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729400275/Research/Team/ezbma8k7wrmrerjkdunt.png" alt="Nadeera A.A.D.P">
+            <div class="icon">
+              <a href="https://www.linkedin.com/in/pathum-nadeera-aad" target="_blank" class="no-change">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Seneviratne H.M.T.V</h3>
+            <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729447295/Research/Team/jb29wnmbomvdzylxophl.jpg" alt="Seneviratne H.M.T.V">
+            <div class="icon">
+              <a href="https://www.linkedin.com/in/thiranya" target="_blank" class="no-change">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Dissanayake D.M.S.S</h3>
+            <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729447788/Research/Team/sjtjgomu7zh2bisp7i77.png" alt="Dissanayake D.M.S.S">
+            <div class="icon">
+              <a href="https://www.linkedin.com/in/sithmi-dissanayake-897943292/" target="_blank" class="no-change">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Rajitha P.A.S</h3>
+            <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729454649/Research/Team/xqtddvisuy5iuxdxegeg.png" alt="Rajitha P.A.S">
+            <div class="icon">
+              <a href="linkdin link............." target="_blank" class="no-change">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <center>
+          <h2>Supervisors</h2>
+        </center>
+        <div class="card-row">
+          <div class="card">
+            <br>
+            <h3>Ms. Jenny Krishara<br> (Supervisor)</h3>
+            <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729456310/Research/Team/qevoioui1i4odewwjhab.png" alt="Jenny Krishara">
+            <div class="icon">
+              <a href="https://linkedin.com/in/jenny-krishara-1a09a0111" target="_blank" class="no-change">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://www.researchgate.net/profile/Jenny-Krishara-3" target="_blank" class="no-change">
+                <i class="fa-brands fa-researchgate"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <br>
+            <h3>Ms. Shalini Rupasinghe<br> (Co-Supervisor)</h3>
+            <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729454894/Research/Team/frm6ype8z1g5lckcyrgs.png" alt="Jenny Krishara">
+            <div class="icon">
+              <a href="https://www.linkedin.com/in/shalini-rupasinghe/" target="_blank" class="no-change">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://www.researchgate.net/profile/Shalini-Rupasinghe" target="_blank" class="no-change">
+                <i class="fa-brands fa-researchgate"></i>
+              </a>
+            </div>
+          </div>
+          
+      </div></section>
+      <section id="contact">
+        <h1 class="header-section">Contact Us</h1>
+        <center>
+          <h2>Contact Us For Any Clarification</h2>
+        </center>
+        <br>
+        <div class="contact-form-container">
+          <br>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="4fab3403-1277-4b10-8b9d-eb1006c4f22c">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required="" fdprocessedid="0xabh8">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required="" fdprocessedid="gdt6y9">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="3" required=""></textarea>
+            </div>
+            <br>
+            <center>
+              <button type="submit" class="btn btn-primary bg-primary" fdprocessedid="icx6ym">
+                Submit
+              </button>
+            </center>
+          </form>
+          <br>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="column">
+        <img src="https://res.cloudinary.com/dzmvext6p/image/upload/v1729402637/Research/o9ynughknat9tv5aclzi.png" width="150" alt="" class="footer-image">
+      </div>
+  
+      <div class="column">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#domain">Domain</a></li>
+          <li><a href="#milestones">Milestones</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <ul class="footer-links">
+          <li><a href="#documents">Documents</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      const documents = [
+  
+        {
+          id: "proposal_Team",
+          url: "https://drive.google.com/file/d/1St62shTZJC-75J3oVfcC7DSkDsxfmY0w/view?usp=drive_link",
+          
+        },
+        {
+          id: "proposal_IT21073496",
+          url: "https://drive.google.com/file/d/15HL14ITjoLsgzy2hp9CVuiGzmQJ22Sb1/view?usp=drive_link",
+        },
+        {
+          id: "proposal_IT21061448",
+          url: "https://drive.google.com/file/d/1DeqYc87TXYtdNRTCFN7NG-pVDjeryNNA/view?usp=drive_link",
+        },
+        {
+          id: "proposal_IT21072260",
+          url: "https://drive.google.com/file/d/1huqjquZEMnEAAF4YmYBHV6spKLWINmwu/view?usp=drive_link",
+        },
+        {
+          id: "proposal_IT21038600",
+          url: "https://drive.google.com/file/d/1t8dIniNivzar-XygTll2TctV7hQuOhNp/view?usp=drive_link",
+        },
+        // =================================
+        {
+          id: "status_IT21073496",
+          url: "https://drive.google.com/file/d/1uk7J5Bwq2vWKloC11BpL9eP2sujBEqv0/view?usp=drive_link",
+        },
+        {
+          id: "status_IT21061448",
+          url: "https://drive.google.com/file/d/1VV0yBPa6f5Ys4qunHpOTDftQ9qVlyeh2/view?usp=drive_link",
+        },
+        {
+          id: "status_IT21072260",
+          url: "https://drive.google.com/file/d/1VPidqj0lZ79NNUtqwsyRXdCLzn5lvwce/view?usp=drive_link",
+        },
+        {
+          id: "status_IT21038600",
+          url: "https://drive.google.com/file/d/16vZxnEqzfbJAMZVpel6_B6Snw9YOsu1p/view?usp=drive_link",
+        },
+
+        // ===================================
+        {
+          id: "progress_presentation_01",
+          url: "https://drive.google.com/file/d/1nNOLHFQL9QsDQnUnLu-LMfJyJVEZqoV0/view?usp=drive_link",
+        },
+
+        // ===================================
+        {
+          id: "research_paper",
+          url: "https://drive.google.com/file/d/1_78N8mAspW8epXwSu3zVle00bf0k7w42/view?usp=drive_link",
+        },
+
+        // ======================================
+        {
+          id: "progress_presentation_02",
+          url: "https://drive.google.com/file/d/1BDk6NJxxyJoOVjT_PJ1mJQm55QuZGCuI/view?usp=drive_link",
+        },
+        // {
+        //   id: "poster_design",
+        //   url: "https://drive.google.com/file/d/1BDk6NJxxyJoOVjT_PJ1mJQm55QuZGCuI/view?usp=drive_link",
+        // },
+
+        // ======================================
+        {
+          id: "final_report",
+          url: "https://drive.google.com/file/d/1OcpOy-53-cDmfh2HGIohaFO8iODCq3Ox/view?usp=drive_link",
+        },
+        {
+          id: "final_report_IT21073496",
+          url: "https://drive.google.com/file/d/1qwVQhJpK4-va58Jlep25q5iTgW_Vzcl6/view?usp=drive_link",
+        },
+        {
+          id: "final_report_IT21061448",
+          url: "https://drive.google.com/file/d/1gB5CGODCmPHV-K69W9BCgOVHk4MXeEPG/view?usp=drive_link",
+        },
+        {
+          id: "final_report_IT21072260",
+          url: "https://drive.google.com/file/d/1Yv_X0pU_nm9GDsTNZyLOAlanm0IldX8t/view?usp=drive_link",
+        },
+        {
+          id: "final_report_IT21038600",
+          url: "https://drive.google.com/file/d/1DejQIaxTw1P0iRsyu7mkKiaNUnj5wSAx/view?usp=drive_link",
+        },
+        // {
+        //   id: "log_book_pathum",
+        //   url: "https://drive.google.com/file/d/1Yv_X0pU_nm9GDsTNZyLOAlanm0IldX8t/view?usp=drive_link",
+        // },
+        // {
+        //   id: "log_book_thiranya",
+        //   url: "https://drive.google.com/file/d/1Yv_X0pU_nm9GDsTNZyLOAlanm0IldX8t/view?usp=drive_link",
+        // },
+        // {
+        //   id: "log_book_sithmi",
+        //   url: "https://drive.google.com/file/d/1Yv_X0pU_nm9GDsTNZyLOAlanm0IldX8t/view?usp=drive_link",
+        // },
+        // {
+        //   id: "log_book_rajitha",
+        //   url: "https://drive.google.com/file/d/1Yv_X0pU_nm9GDsTNZyLOAlanm0IldX8t/view?usp=drive_link",
+        // },
+
+
+        {
+          id: "status_IT21073496_02",
+          url: "https://drive.google.com/file/d/1n_yOeakfXrOQgTG8nlJcj7XSC56MSc1U/view?usp=drive_link",
+        },
+        {
+          id: "status_IT21061448_02",
+          url: "https://drive.google.com/file/d/1uyHHrNGdRy06v1AaU1c0GIjPry3snmr4/view?usp=drive_link",
+        },
+        {
+          id: "status_IT21072260_02",
+          url: "https://drive.google.com/file/d/1bcmElAiwK8XmIzGwEaQLb0GyCY-whq1k/view?usp=drive_link",
+        },
+        {
+          id: "status_IT21038600_02",
+          url: "https://drive.google.com/file/d/1ZV-QpsP364vNaYstuywMZXMyrgOrXteZ/view?usp=drive_link",
+        },
+
+        // =========================================
+        {
+          id: "taf_team",
+          url: "https://drive.google.com/file/d/1YtiGEfNB4MGcvDVPTC4KMOdrLHaPvUrp/view?usp=drive_link",
+        },
+      ];
+
+
+
+      documents.forEach((doc) => {
+        document.getElementById(doc.id).addEventListener("click", function () {
+          window.open(doc.url, "_blank");
+        });
+      });
+      function toggleMenu() {
+        const nav = document.querySelector(".nav-childer2");
+        nav.classList.toggle("show");
+        nav.classList.toggle("hide");
+        const header = document.querySelector("header");
+        header.classList.toggle("expanded");
+        const main = document.querySelector("main");
+        const isExpanded = nav.classList.contains("show");
+        main.style.paddingTop = isExpanded ? "200px" : "70px";
+      }
+      document.querySelectorAll("nav a, .footer-links a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+          targetSection.scrollIntoView({ behavior: "smooth" });
+          const nav = document.querySelector(".nav-childer2");
+          nav.classList.remove("show");
+          nav.classList.add("hide");
+          const header = document.querySelector("header");
+          header.classList.remove("expanded");
+          const main = document.querySelector("main");
+          main.style.paddingTop = "70px";
+        });
+      });
+  
+      // Intersection Observer for timeline animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      });
+  
+      document.querySelectorAll(".timeline ul li").forEach((li) => {
+        observer.observe(li);
+      });
+  
+      // Loading screen removal once images are loaded
+      window.addEventListener("load", () => {
+        const loadingScreen = document.getElementById("loading-screen");
+        setTimeout(() => {
+          loadingScreen.style.display = "none";
+        }, 3000); // Matches the duration of the fadeOut animation (2s delay + 1s animation)
+      });
+    </script>
+  
+  
+  <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
