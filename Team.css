@@ -537,7 +537,7 @@ nav.scrolled {
     }
 
     .full-width-card{
-        margin-top: 50px;
+        margin-top: 53px;
         height: 1115px;
     }
 
@@ -1095,6 +1095,176 @@ hr {
     }
 
     .team-circle{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============= Footer responsive ==============*/
+
+/* Mobile styles */
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        bottom: -207px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer-logo {
+        left: 0;
+        top: 20px;
+        width: 142px;
+        margin: 21px;
+        margin-left: 109px;
+    }
+
+    .content-section {
+        left: 14px;
+        top: 74px;
+        max-width: 100%;
+        font-size: 12px;
+        margin-left: -13px;
+    }
+    .content-section hr{
+        display: none;
+    }
+
+    .content-section p{
+        margin: 22px;
+        font-size: 14px;
+    }
+
+    .contact-info {
+        top: 80px;
+    }
+    .contact-info p{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .quick-link {
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-link li {
+        left: -117px;
+        top: 140px;
+        font-size: 15px;
+        padding: 4px;
+    }
+    .quick-link li::before{
+        content: "●";
+        color: #F57C00;
+        position: absolute;
+        left: -18px;
+        top: 3px;
+        font-size: 16px;
+    }
+
+
+    .our-services {
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our-services li {
+        left: 55px;
+        top: -134px;
+        font-size: 15px;
+        padding: 4px;
+    }
+    .our-services li::before{
+        content: "●";
+        color: #F57C00;
+        position: absolute;
+        left: 1px;
+        top: 3px;
+        font-size: 16px;
+    }
+    
+    .copyright{
+        top: 530px;
+        max-width: 370px;
+        text-align: center;
+    }
+
+    .footer-background {
+        height: 700px;
+        width: 100%;
+    }
+
+    .link-hedding, .services-hedding {
+        display: none; /* Hide headings */
+    }
+
+    .email-subscription{
+        left: -861px;
+        margin-top: 592px;
+    }
+    .email-subscription button{
+        color: #FF8C00;
+        border: 2px solid #ffffff;
+        padding: 8px 25px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        position: absolute;
+        right: 960px;
+        top: 97px;
+        width: 200px;
+        font-weight: bold;
+    }
+    .footer-social-icons {
+        display: none;
+    }
+
+    .email-subscription{
         display: none;
     }
 }
