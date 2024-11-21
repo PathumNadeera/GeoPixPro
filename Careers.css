@@ -757,6 +757,10 @@ label {
     .apply-btn {
         padding: 10px;
         font-size: 14px;
+        width: 181px;
+        display: block;
+        margin-left: 66px;
+        margin-right: auto;
     }
 }
 
@@ -1093,6 +1097,8 @@ label {
         font-size: 20px;
         font-family: 'Syne', sans-serif;
     }
+
+    
 }
 
 
@@ -1299,7 +1305,7 @@ hr {
     position: absolute;
     left: 0px;
     color: #ffffff;
-    bottom: -14px;
+    bottom: -308px;
     font-size: 14px;
 }
 
@@ -1400,8 +1406,8 @@ hr {
     
 
     .full-width-card{
-        top: 508px;
-        height: 578px;
+        top: 506px;
+        height: 620px;
     }
 
     .description p{
@@ -1414,10 +1420,10 @@ hr {
     }
 
     .job-vacancy{
-        margin-top: 310px;
+        margin-top: 375px;
     }
     .vacancy h2{
-        margin-top: 530px;
+        margin-top: 610px;
         margin-left: auto; 
         margin-right: auto; 
         text-align: center; 
@@ -1427,11 +1433,11 @@ hr {
     }
 
     .join-us-section{
-        margin-top: 1645px;
+        margin-top: 1820px;
     }
 
     .full-width-card-2{
-        margin-top: 1428px;
+        margin-top: 1670px;
         height: 1142px;
     } 
 
@@ -1441,34 +1447,31 @@ hr {
     }
 
     .topic{
-        margin-top: -20px;
+        max-width: 365px;
+        margin-top: -5px;
         align-content: center;
-        text-align: center;
-        margin-left: -52px;
-        max-width: 712px;
+        margin-left: -115px;
+        position: relative;
+        left: 6px;
     }
 
-    
 
+
+    .header-text h1{
+        font-size: 50px;
+        position: relative;
+        top: 135px;
+    }
+
+    .header-text h1::before {
+        content: "●";
+        color: #F57C00;
+        position: absolute;
+        left: 59px;
+        top: -78px;
+        font-size: 16px;
+    }
 }
-
-
-
-.header-text h1{
-    font-size: 50px;
-    position: relative;
-    top: 135px;
-}
-
-.header-text h1::before {
-    content: "●";
-    color: #F57C00;
-    position: absolute;
-    left: 59px;
-    top: -78px;
-    font-size: 16px;
-}
-
 
 .header-text p{
     font-size: 15px;
@@ -1534,7 +1537,7 @@ hr {
 
     .square-image-2{
         margin-left: -820px;
-        margin-top: 538px;
+        margin-top: 600px;
         width: 319px;
         height: 224px;
         
@@ -1542,10 +1545,11 @@ hr {
 
     .dot-img2{
         margin-left: -655px;
-        top: 661px;
+        top: 724px;
         position: relative;
         width: 20px;
     }
+    
 }
 
 
@@ -1565,7 +1569,7 @@ hr {
 
 @media (max-width: 768px) {
     .footer-container {
-        bottom: -207px;
+        bottom: -40px;
         display: flex;
         flex-direction: column;
         align-items: center;
