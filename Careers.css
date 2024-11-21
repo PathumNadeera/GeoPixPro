@@ -132,7 +132,7 @@ nav.scrolled {
         top: 53px; 
         left: 0;
         right: 0;
-        background-color: rgba(20, 25, 45, 0.8); 
+        background-color: rgba(20, 25, 45, 1.0); 
         display: none; 
         padding: 10px 0; 
     }
@@ -1135,7 +1135,8 @@ label {
     height: 0px;
     max-width: 450px;
     left: 180px;
-    font-family: 'Roboto';
+    font-family: 'Syne', sans-serif;
+    text-align: justify;
     font-size: 14px;
     font-weight: 300;
 }
@@ -1264,7 +1265,7 @@ label {
     cursor: pointer;
     transition: background-color 0.3s;
     position: absolute;
-    right: 11px;
+    right: 58px;
     top: 97px;
     width: 200px;
     font-weight: bold;
@@ -1413,10 +1414,10 @@ hr {
     }
 
     .job-vacancy{
-        margin-top: 217px;
+        margin-top: 310px;
     }
     .vacancy h2{
-        margin-top: 464px; 
+        margin-top: 530px;
         margin-left: auto; 
         margin-right: auto; 
         text-align: center; 
@@ -1564,7 +1565,7 @@ hr {
 
 @media (max-width: 768px) {
     .footer-container {
-        bottom: 0px;
+        bottom: -207px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1690,10 +1691,7 @@ hr {
     .email-subscription{
         display: none;
     }
-
-    
 }
-
 
 
 

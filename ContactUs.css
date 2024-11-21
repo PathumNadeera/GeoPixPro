@@ -135,7 +135,7 @@ nav.scrolled {
         top: 53px; 
         left: 0;
         right: 0;
-        background-color: rgba(20, 25, 45, 0.8); 
+        background-color: rgba(20, 25, 45, 1.0); 
         display: none; 
         padding: 10px 0; 
     }
@@ -538,7 +538,8 @@ input[type="text"], input[type="email"], textarea {
     height: 0px;
     max-width: 450px;
     left: 180px;
-    font-family: 'Roboto';
+    font-family: 'Syne', sans-serif;
+    text-align: justify;
     font-size: 14px;
     font-weight: 300;
 }
@@ -668,7 +669,7 @@ input[type="text"], input[type="email"], textarea {
     cursor: pointer;
     transition: background-color 0.3s;
     position: absolute;
-    right: 11px;
+    right: 58px;
     top: 97px;
     width: 200px;
     font-weight: bold;
@@ -757,7 +758,7 @@ hr {
 
 @media (max-width: 768px) {
     .footer-container {
-        bottom: -1060px;
+        bottom: -1110px;
         display: flex;
         flex-direction: column;
         align-items: center;
