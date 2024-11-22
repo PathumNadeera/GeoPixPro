@@ -21,6 +21,10 @@
       <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
 
 
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 </head>
 <body>
 
@@ -38,6 +42,10 @@
                 <a href="ContactUs.html">Contact Us</a>
                
 
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> 
+               
             </div>
         </nav>
 
@@ -97,14 +105,14 @@
 
     <div class="square"></div>
     <div class="dot-img3">
-        <img src="Image/dot-img2.png" >
+        <!-- <img src="Image/dot-img2.png" > -->
     </div>
 
 
 
  <!-- ========= sections 3 ==========  -->
 
-    <div class="full-width-card-2">
+    <!-- <div class="full-width-card-2">
         <div class="square-image-5"></div>
         <div class="square-image-6"></div>
         <div class="square-image-7"></div>
@@ -121,23 +129,24 @@
     </div>
     <div class="dot-img-2">
         <img src="Image/Dot-img4.png" >
-    </div>
+    </div> -->
 
 
 
 
     <div class="contact-card">
-        
         <h3>Ready to scale your software <br>development ?</h3>
         <p>Connect with us to learn how we can help accelerate your development goals.</p>
         <button>Let's Talk<i class="fas fa-arrow-right ps-1"></i></button>
     </div>
-    <div class="dot-img5">
+
+    <!-- <div class="dot-img5">
         <img src="Image/Dot-img2.png" >
-    </div>
+    </div> -->
     
 
 </body>
+
 
 
 
@@ -187,7 +196,7 @@
 
             <div class="email-subscription">
                 <h2>Join The GeoPixPro Family</h2>
-                <form action="your-server-endpoint" method="POST">
+                <form action="https://formspree.io/f/mdkokljb" method="POST">
                     <input type="email" name="email" placeholder="Enter Email Address" required>
                     <button type="submit">Subscribe Now</button>
                 </form>
@@ -197,12 +206,11 @@
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                
-                <div class="copyright">
-                    <p>© 2024 Copyright by GeoPixPro Technologies. All rights reserved.</p>
-                </div>
             </div>
 
+            <div class="copyright">
+                <p>© 2024 Copyright by GeoPixPro Technologies. All rights reserved.</p>
+            </div>
             
         </div>
     </div>
@@ -269,6 +277,33 @@ document.addEventListener("DOMContentLoaded", function() {
     elementsToAnimate.forEach(element => {
         observer.observe(element);
     });
+});
+
+
+
+
+
+
+// <!-- ========= Nav bar manu =========== -->
+
+document.getElementById('hamburger').addEventListener('click', function () {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active'); 
+        });
+
+
+
+
+        function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+        }
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
 });
 
 
