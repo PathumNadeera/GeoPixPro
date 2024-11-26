@@ -816,6 +816,7 @@ hr {
         padding: 15px;
         border-radius: 15px;
         margin-left: -180px;
+        margin-top: 950px;
     }
 
     .contact-card p{
@@ -829,9 +830,10 @@ hr {
     }
 
     .dot-img5{
-        margin-left: -779px;
-        position: relative;
-        top: 1040px; 
+        position: absolute;
+        left: -6px;
+        z-index: 0;
+        top: 2999px;
     }
 }
 
@@ -1003,9 +1005,9 @@ hr {
 
     .dot-img2{
         position: absolute;
-        left: -10px;
+        left: 13px;
         z-index: 1;
-        bottom: -982px;
+        top: -6px;
     }
 
     .description h3{
@@ -1048,7 +1050,60 @@ hr {
         margin-left: 0px;
     
     }
+
+    .full-width-card-2{
+        top: 1875px;
+        height: 860px;
+    }
+
+    .square-image-5{
+        width: 150px;
+        height: 320px;
+        margin-left: -138px;
+    }
+
+    .square-image-6{
+        width: 159px;
+        height: 156px;
+        margin-left: -226px;
+    }
+
+    .square-image-7{
+        width: 158px;
+        height: 156px;
+        margin-left: -226px;
+        margin-top: -52px;
+    }
+
+    .description-3{
+        margin-left: -666px;
+        margin-top: 345px;
+    }
+
+    .description-3 h2{
+        width: 160px;
+    }
+
+    .description-3 p{
+        margin-right: -145px;
+        margin-top: 20px;
+    }
+
+    .description-3 h3{
+        width: 300px;
+    }
+
+    .dot-img3{
+        position: absolute;
+        left: 13px;
+        z-index: 1;
+        top: 1258px;
+    }
 }
+
+
+
+
 
 
 
