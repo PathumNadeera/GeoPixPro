@@ -811,11 +811,11 @@ hr {
 
 @media (max-width: 480px) {
     .contact-card {
-        width: 78%;
-        height: 280px;
+        width: 75%;
+        height: 278px;
         padding: 15px;
         border-radius: 15px;
-        margin-left: -180px;
+        margin-left: -174px;
         margin-top: 950px;
     }
 
@@ -1020,7 +1020,7 @@ hr {
         margin-top: 340px;
         margin-left: -199px;
         text-align: justify;
-        margin-right: 36px;
+        margin-right: 46px;
     }
 
     .square{
@@ -1076,7 +1076,7 @@ hr {
     }
 
     .description-3{
-        margin-left: -666px;
+        margin-left: -675px;
         margin-top: 345px;
     }
 
@@ -1085,8 +1085,8 @@ hr {
     }
 
     .description-3 p{
-        margin-right: -145px;
         margin-top: 20px;
+        margin-right: -157px;
     }
 
     .description-3 h3{
