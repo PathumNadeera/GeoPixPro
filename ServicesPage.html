@@ -18,7 +18,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -36,6 +36,9 @@
                 <a href="Careers.html">Careers</a>
                 <a href="ContactUs.html">Contact Us</a>
     
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> 
             </div>
         </nav>
         
@@ -323,6 +326,7 @@
 
 
 
+
 <footer>
     <div class="footer-container">
         <img src="Image/footer-background.png" alt="Footer Background" class="footer-background">
@@ -368,7 +372,7 @@
 
             <div class="email-subscription">
                 <h2>Join The GeoPixPro Family</h2>
-                <form action="your-server-endpoint" method="POST">
+                <form action="https://formspree.io/f/mdkokljb" method="POST">
                     <input type="email" name="email" placeholder="Enter Email Address" required>
                     <button type="submit">Subscribe Now</button>
                 </form>
@@ -378,15 +382,16 @@
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                
-                <div class="copyright">
-                    <p>© 2024 Copyright by GeoPixPro Technologies. All rights reserved.</p>
-                </div>
             </div>
 
+            <div class="copyright">
+                <p>© 2024 Copyright by GeoPixPro Technologies. All rights reserved.</p>
+            </div>
             
         </div>
     </div>
+
+</footer>
 
 </footer>
 
@@ -479,6 +484,32 @@ document.addEventListener("DOMContentLoaded", function() {
     elementsToAnimate.forEach(element => {
         observer.observe(element);
     });
+});
+
+
+
+
+
+// <!-- ========= Nav bar manu =========== -->
+
+document.getElementById('hamburger').addEventListener('click', function () {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active'); 
+        });
+
+
+
+
+        function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+        }
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
 });
 
 
