@@ -594,6 +594,44 @@ main {
 }
 
 
+
+
+
+.full-width-card {
+    position: relative; /* Ensures button is positioned relative to this */
+}
+
+.full-width-card button {
+    background-color: #F37423;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    font-weight: 600;
+    top: 115%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.full-width-card button i {
+    padding-left: 10px;
+}
+
+.full-width-card button:hover {
+    background-color: #e55; /* Hover effect changes background color */
+}
+
+
+
+
+
+
+
+
+
 .service-card {
     transition: transform 0.3s ease-in-out;
 }
@@ -703,7 +741,7 @@ main {
     color: #2F327D; 
 }
 
-.full-width-card .read-more-button {
+/* .full-width-card .read-more-button {
     background-color: #F37423; 
     border: none;
     padding: 10px 20px;
@@ -714,7 +752,7 @@ main {
     font-weight: 600;
     position: absolute;
     top: 368px;
-}
+} */
 
 .full-width-card .read-more-button:hover {
     background-color: #e55;
@@ -940,7 +978,7 @@ main {
     text-align: left;
     font-weight: 200;
     position: absolute;
-    top: 386px;
+    top: 406px;
     text-align: justify;
 }
 .read-more {
@@ -1016,7 +1054,7 @@ main {
     font-family: 'Syne', sans-serif;
     color: #041D38;
     line-height: 2;
-    max-width: 645px;
+    max-width: 593px;
     margin: 0;
     position: absolute;
     left: -612px;
@@ -1046,7 +1084,7 @@ main {
     background-position: center;
     position: absolute;
     left: 44px;
-    top: 955px;
+    top: 894px;
     z-index: 0;
     opacity: 0; /* Start hidden */
     transform: translateX(100%); /* Start off-screen */
@@ -1061,7 +1099,7 @@ main {
 .dot-img5{
     position: absolute;
     left: 59px;
-    bottom: -879px;
+    bottom: -848px;
     z-index: -1;
 }
 
@@ -1237,7 +1275,7 @@ main {
     width: 100%;
     height: 262px;
     background-color: #f7f7f7;
-    top: 3203px;
+    top: 3145px;
     position: absolute;
     z-index: 2;
 }
@@ -1360,7 +1398,6 @@ body {
     width: 50%; 
     margin-left: auto; 
     transform: translateY(-1000px);
-    padding: 360px;
     position: relative;
     top: -239px;
 }
@@ -1368,8 +1405,8 @@ body {
 .Section-6 h2{
     font-size: 22px;
     position: absolute;
-    top: 1789px;
-    left: 603px;
+    margin-top: 1762px;
+    margin-left: -120px;
     font-family: 'Roboto';
 }
 
@@ -1377,16 +1414,16 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     position: absolute;
-    top: 1830px;
-    left: 576px;
+    top: 1796px;
+    left: -151px;
     text-align: left;
     color: #041D38;
 }
 
 .redline{
     position: absolute;
-    top: 2124px;
-    left: 56px;
+    top: 2083px;
+    left: -595px;
 }
 
 
@@ -1397,7 +1434,8 @@ body {
     position: relative;
     height: 1000px;
     width: 100%;
-    top: 781px;
+    top: 1100px;
+    left: -290px;
 }
 
 .agile-card {
@@ -1506,6 +1544,7 @@ body {
     bottom: -827px;
     right: 1450px;
     transform: scaleX(-1);
+    display: none;
 }
 
 
@@ -1585,7 +1624,7 @@ body {
 
 .footer-container {
     position: relative;
-    bottom: 440px;
+    bottom: -176px;
     display: block;
 }
 
