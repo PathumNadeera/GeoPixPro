@@ -590,7 +590,8 @@ nav.scrolled {
     height: 0px;
     max-width: 450px;
     left: 180px;
-    font-family: 'Roboto';
+    font-family: 'Syne', sans-serif;
+    text-align: justify;
     font-size: 14px;
     font-weight: 300;
 }
@@ -719,7 +720,7 @@ nav.scrolled {
     cursor: pointer;
     transition: background-color 0.3s;
     position: absolute;
-    right: 11px;
+    right: 58px;
     top: 97px;
     width: 200px;
     font-weight: bold;
@@ -753,7 +754,7 @@ hr {
     position: absolute;
     left: 0px;
     color: #ffffff;
-    bottom: -14px;
+    bottom: -308px;
     font-size: 14px;
 }
 
