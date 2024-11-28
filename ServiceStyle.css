@@ -1133,6 +1133,7 @@ hr {
     .cards-topic{
         margin-top: 765px;
         margin-left: -573px;
+        width: 250px;
     }
 
     .service-card p{
@@ -1239,6 +1240,46 @@ hr {
         z-index: 0;
         top: 4646px;
     }
+
+    .modal-content{
+        margin-top: 62px;
+        margin-left: 32px;
+        width: 286px;
+        height: 1324px;
+    }
+
+    .s-description{
+        width: 253px;
+        margin-left: -8px;
+    }
+
+    #modalTitle{
+        margin-left: -9px;
+    }
+
+    
+    .tech-icons {
+        flex-wrap: wrap;
+        gap: 0px;
+        margin-left: -19px;
+        margin-right: 10px;
+        justify-content: start;
+    }
+    .tech-icons > :nth-child(-n+3) {
+        flex: 0 1 calc(33.33% - 6px); /* First 3 icons: equally spaced */
+    }
+    .tech-icons > :nth-child(n+4) {
+        flex: 0 1 calc(50% - 4.5px); /* Last 2 icons: equally spaced */
+    }
+
+    .contact-us-button {
+        display: block;
+        margin: 0 auto;
+        margin-right: 101px;
+        margin-top: 98px;
+        margin-left: 43px;
+    }
+    
 }
 
 
