@@ -598,3 +598,37 @@ ul li::before {
         padding: 10px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Big screens */
+
+@media (min-width: 1600px) and (max-width: 3000px) {
+    .job-details {
+        margin-left: 166px;
+    }
+
+    .back-button {
+        margin-left: 180px;
+    }
+
+    .apply-form {
+        left: -189px;
+    }
+
+
+
+
+
+
+
+}

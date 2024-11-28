@@ -1700,3 +1700,53 @@ hr {
 
 
 
+/* Big screens */
+
+@media (min-width: 1600px) and (max-width: 3000px) {
+    .three-image {
+        margin-left: 192px;
+    }
+
+    .description {
+        left: 279px;
+    }
+
+    .dot-img2 {
+        left: 953px;
+    }
+
+    .vacancy h2 {
+        margin-left: 673px;
+    }
+
+    .description-3 {
+        width: 100%;
+        margin-left: auto;
+        padding: 40px;
+        position: absolute;
+        left: 683px;
+        box-sizing: border-box;
+    }
+
+    .description-3 {
+        left: 695px;
+    }
+
+    .benefits li {
+        left: 733px;
+    }
+
+    .vacancy-img {
+        left: 333px;
+    }
+    .dot-img-benifit {
+        left: 291px;
+    }
+
+    hr {
+        width: 1378px;
+    }
+
+
+
+}

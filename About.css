@@ -1255,3 +1255,73 @@ hr {
     }
 }
 
+
+
+
+
+
+
+
+
+/* big screen responsive */
+
+@media (min-width: 1600px) and (max-width: 3000px) {
+    
+    .contact-card {
+        left: 411px;
+        top: 1441px;
+    }
+    .dot-img5 {
+        left: 1323px;
+        bottom: -1102px;
+    }
+
+    hr {
+        width: 1378px;
+    }
+
+    .description {
+        margin-left: 971px;
+    }
+
+    .three-image {
+        margin-left: 164px;
+    }
+    .dot-img2 {
+        left: 409px;
+    }
+
+    .description-2 {
+        left: 278px;
+    }
+
+    .square {
+        left: 1037px;
+    }
+
+    .description-3 {
+        left: 876px;
+    }
+
+    .square-image-7,.square-image-6 {
+        left: 585px;
+    }
+    .square-image-5 {
+        left: 315px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

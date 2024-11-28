@@ -886,3 +886,27 @@ hr {
     }
 }
 
+
+
+
+
+
+
+
+
+/* Big screens */
+
+@media (min-width: 1600px) and (max-width: 3000px) {
+    .contact-grid {
+        top: 570px;
+        margin-left: 153px;
+    }
+
+    .footer-container {
+        bottom: -420px;
+    }
+
+    hr {
+        width: 1378px;
+    }
+}
