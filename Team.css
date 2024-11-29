@@ -1105,6 +1105,41 @@ hr {
 
 
 
+/* big screen responsive */
+
+@media (min-width: 1600px) and (max-width: 3000px) {
+    
+    .square-image-2 {
+        left: 315px;
+    }
+    .square-image-3 {
+        left: 660px;
+    }
+    .square-image-4 {
+        left: 653px;
+    }
+
+    .dot-img2 {
+        left: 223px;
+        bottom: 20px;
+    }
+
+    .grid {
+        position: relative;
+        top: 20px;
+        margin-left: 187px;
+    }
+
+    .section-2 {
+        position: relative;
+        top: -651px;
+        margin-left: 183px;
+    }
+
+
+
+
+}
 
 
 
