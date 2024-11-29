@@ -580,27 +580,55 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //========== Part 5 animation ==========
+// document.addEventListener("DOMContentLoaded", function() {
+//     const observerOptions = {
+//         root: null,
+//         rootMargin: '0px',
+//         threshold: 0.1
+//     };
+
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('in-view');
+//                 observer.unobserve(entry.target);
+//             }
+//         });
+//     }, observerOptions);
+
+//     const section5Description = document.querySelector('.section-5-description');
+//     if (section5Description) {
+//         observer.observe(section5Description);
+//     }
+// });
+
 document.addEventListener("DOMContentLoaded", function() {
     const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1  // Adjust the threshold as needed
+        root: null,  // Use the viewport as the root
+        rootMargin: '0px', // No margin; triggers when the element is exactly in the viewport
+        threshold: 0.5  // Trigger when 50% of the element is visible
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                observer.unobserve(entry.target);
+                entry.target.classList.add('in-view'); // Add the animation class
+                observer.unobserve(entry.target); // Stop observing after animation
             }
         });
     }, observerOptions);
 
     const section5Description = document.querySelector('.section-5-description');
+
     if (section5Description) {
-        observer.observe(section5Description);
+        observer.observe(section5Description); // Observe the specific section
     }
 });
+
+
+
+
+
 
 //======== Part-6 animation 
 
