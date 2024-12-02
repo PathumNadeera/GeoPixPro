@@ -37,6 +37,9 @@
                
                 
             </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> 
+            </div>
         </nav>
 
         
@@ -229,12 +232,12 @@
         </div>
 
 
-        <div class="vec-4">
+        <!-- <div class="vec-4">
             <img src="Image/vec-2.png" >
         </div>
         <div class="vec-5">
             <img src="Image/vec-3.png" >
-        </div>
+        </div> -->
 
         <canvas id="neutron-canvas"></canvas>
         
@@ -338,7 +341,7 @@
         <img src="Image/logo3.png" alt="Logo" class="footer-logo">
 
         <div class="content-section">
-            <p>Our team is available to provide you with the information and assistance you require. We appreciate all inquiries and are here to assist you.</p>
+            <p>Lorem ipsum dolor sit amet consectetur. Morbi egestas cras venenatis semper pulvinar viverra dolor. Sit eu pharetra nulla sagittis consequat.</p>
             <hr> 
             <div class="contact-info">
                 <p><i class="fas fa-phone-alt"></i> +94 723456789</p>
@@ -377,7 +380,7 @@
 
             <div class="email-subscription">
                 <h2>Join The GeoPixPro Family</h2>
-                <form action="your-server-endpoint" method="POST">
+                <form action="https://formspree.io/f/mdkokljb" method="POST">
                     <input type="email" name="email" placeholder="Enter Email Address" required>
                     <button type="submit">Subscribe Now</button>
                 </form>
@@ -387,12 +390,11 @@
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                
-                <div class="copyright">
-                    <p>© 2024 Copyright by GeoPixPro Technologies. All rights reserved.</p>
-                </div>
             </div>
 
+            <div class="copyright">
+                <p>© 2024 Copyright by GeoPixPro Technologies. All rights reserved.</p>
+            </div>
             
         </div>
     </div>
@@ -743,6 +745,32 @@ let slideIndex = 0;
         window.addEventListener('scroll', handleScroll);
     });
     
+
+
+
+
+
+    // <!-- ========= Nav bar manu =========== -->
+
+document.getElementById('hamburger').addEventListener('click', function () {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active'); 
+        });
+
+
+
+
+        function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+        }
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+});
 
 
 </script>
