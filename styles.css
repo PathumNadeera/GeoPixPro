@@ -1935,8 +1935,44 @@ hr {
     }
 
     hr {
-        width: 1378px;
+        width: 1366px;
     }
 
 
+    .best-it-solution {
+        font-size: 102px;
+    }
+
+    .additional-text {
+        font-size: 20px;
+        top: 534px;
+    }
+
+    .talk-button {
+        padding: 10px 25px;
+        top: 401%;
+    }
+
+    .footer-background {
+        height: 430px;
+    }
+
+    
+    .social-icons {
+        top: 409%;
+    }
+
+    .agile-cards-container {
+        top: 1099px;
+    }
+
+    .Section-6 h2 {
+        margin-top: 1749px;
+    }
+
+    .vec-4,.vec-5 {
+        display: none;
+    }
+    
+    
 }

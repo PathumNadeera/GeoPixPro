@@ -909,4 +909,8 @@ hr {
     hr {
         width: 1378px;
     }
+
+    .footer-background {
+        height: 430px;
+    }
 }
