@@ -513,9 +513,12 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const rows = document.querySelectorAll('.job-vacancy .row');
 
+    console.log('A',rows)
+
     rows.forEach(row => {
+        console.log('B',row)
         row.addEventListener('click', function() {
-            const jobType = this.getAttribute('data-job');
+            const jobType = this.getAttribute('data-job');console.log('C',jobType)
             if (jobType) {
                 window.location.href = `job-vecancy.html?job=${jobType}`;
             }

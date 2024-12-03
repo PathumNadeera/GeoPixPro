@@ -69,6 +69,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
             const jobType = urlParams.get('job');
+                console.log('1',jobType)
             const jobTitleElement = document.getElementById('job-title');
             const jobDetailsElement = document.getElementById('job-details');
 
@@ -153,7 +154,7 @@
                 }
             };
 
-            if (jobDetails[jobType]) {
+            
                 jobTitleElement.textContent = jobDetails[jobType].title;
                 jobDetailsElement.innerHTML = `
                     <h2>Job Description</h2>
@@ -163,7 +164,7 @@
                     <h2>Requirements</h2>
                     <ul>${jobDetails[jobType].requirements.map(item => `<li>${item}</li>`).join('')}</ul>
                 `;
-            } else {}
+            
 
         });
 
