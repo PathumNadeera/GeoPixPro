@@ -1890,10 +1890,10 @@ hr {
         max-width: 618px;
     }
 
-    .background-3-img {
+    /* .background-3-img {
         width: 100%;
         height: 592px;
-    }
+    } */
 
     .three-image {
         position: absolute;
@@ -2109,16 +2109,28 @@ hr {
 
     .additional-text {
         max-width: 70%;
-        top: 425px;
+        top: 383px;
     }
 
     .talk-button {
-        top: 380%;
+        position: relative;
+        top: 488px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
     }
 
     .social-icons {
-        margin-top: 100px;
-        margin-left: 10px;
+        margin-top: 522px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        width: auto;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        animation: slideUp 2s ease-out forwards;
+        flex-wrap: nowrap;
     }
 
     .vec-2,.vec-3 {
@@ -2190,12 +2202,12 @@ hr {
     }
     
     .circle-img img {
-        width: 300px;
-        height: 300px;
-        position: relative;
-        left: 152px;
-        margin-top: 708px;
-        border-radius: 3%;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        border: none;
+        object-fit: cover;
+        margin-top: 590px;
     }
 
     .circle-img {
@@ -2203,8 +2215,13 @@ hr {
         transform: translateY(0);
         opacity: 1;
         transition: none;
-        margin-left: -108px;
+        margin-left: 0;
         margin-top: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
     }
 
     .full-width-card button {
@@ -2227,7 +2244,7 @@ hr {
 
     .background-3-img {
         width: 100%;
-        height: 956px;
+        height: 890px;
     }
     
     .square-3,.Blank-square  {
@@ -2239,6 +2256,7 @@ hr {
         margin: 0 auto; 
         position: relative; 
         padding: 20px; 
+        margin-top: 57px;
     }
 
     .description-4 h2 {
@@ -2254,12 +2272,13 @@ hr {
     .square-image-2 {
         width: 308px;
         height: 203px;
-        left: 47px;
-        top: 695px;
-        border-top-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+        position: absolute;
+        top: 157%;
+        left: 50%;
+        transform: translate(13%, 312%);
     }
 
 
