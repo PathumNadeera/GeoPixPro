@@ -1625,7 +1625,7 @@ body {
 
 .footer-container {
     position: relative;
-    bottom: -176px;
+    bottom: -200px;
     display: block;
 }
 
@@ -1651,6 +1651,7 @@ body {
     max-width: 450px;
     left: 180px;
     font-family: 'Syne', sans-serif;
+    text-align: justify;
     font-size: 14px;
     font-weight: 300;
 }
@@ -1758,8 +1759,6 @@ body {
 .email-subscription h2 {
     margin: 5px 5px 21px -12px;
     font-size: 18px;
-    position: relative;
-    left: 35px;
 }
 
 .email-subscription input[type="email"] {
@@ -1771,8 +1770,6 @@ body {
     height: 16px;
     text-align: center;
     font-weight: bold;
-    position: absolute;
-    right: 3px;
 }
 
 .email-subscription button {
@@ -1783,7 +1780,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     position: absolute;
-    right: 14px;
+    right: 58px;
     top: 97px;
     width: 200px;
     font-weight: bold;
@@ -1817,7 +1814,7 @@ hr {
     position: absolute;
     left: 0px;
     color: #ffffff;
-    bottom: -14px;
+    bottom: -308px;
     font-size: 14px;
 }
 
