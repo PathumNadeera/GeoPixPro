@@ -924,22 +924,6 @@ hr {
 
 
 
-
-/* link footer */
-
-.quick-link a {
-    text-decoration: none !important; /* Removes the underline */
-    color: white !important; /* Changes the text color to white */
-}
-.quick-link a.active {
-    color: rgb(41, 151, 78); /* Replace with your preferred active color */
-}
-
-
-
-
-
-
 /* ===============   Nav Mobile Styles ================ */
 
 @media (max-width: 768px) {
