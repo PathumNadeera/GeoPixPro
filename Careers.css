@@ -674,6 +674,42 @@ label {
     transform: scale(1.1);
 }
 
+
+
+/* ===================== No vecancy ====================== */
+/* ======================================================= */
+
+.vacancy-message {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin: 159px;
+    position: relative;
+    top: 403px;
+    font-size: 20px;
+}
+
+.vacancies-highlight {
+    color: #F57C00; 
+    font-weight: bold;
+}
+
+.email-link {
+    color: #F57C00;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ======================================================= */
+/* ===================================================== */
+
+
+
+
+
 .column {
     padding: 5px;
     text-align: justify;
