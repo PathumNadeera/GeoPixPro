@@ -44,7 +44,7 @@
 
         <section class="apply-form">
             <h2>Apply Now</h2>
-            <form action="https://formspree.io/f/mdkokljb" method="POST">
+            <!-- <form action="https://formspree.io/f/mdkokljb" method="POST">
                 <input type="text" name="fullname" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <textarea name="coverLetter" placeholder="Cover Letter" rows="4"></textarea>
@@ -54,6 +54,17 @@
                 
                 <input type="submit" value="Submit Application">
                 </div>   
+            </form> -->
+
+            <form action="https://formspree.io/f/mdkokljb" method="POST" enctype="multipart/form-data">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="coverLetter" placeholder="Cover Letter" rows="4"></textarea>
+                <div class="resume">
+                    <label for="resumeUpload" style="font-size: 14px; color: #4d4d4d;">Upload your Resume (PDF)</label>
+                    <input type="file" name="resume" id="resumeUpload" accept=".pdf" required>
+                </div>   
+                <input type="submit" value="Submit Application">
             </form>
         </section>
         
