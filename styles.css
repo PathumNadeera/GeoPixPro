@@ -1406,18 +1406,19 @@ body {
 .Section-6 h2{
     font-size: 22px;
     position: absolute;
-    margin-top: 1762px;
+    margin-top: 1729px;
     margin-left: -120px;
     font-family: 'Roboto';
 }
 
-.Section-6 p{
-    font-family: 'Roboto', sans-serif;
+.Section-6 p {
+    font-family: 'Syne', sans-serif;
     font-size: 15px;
     position: absolute;
-    top: 1796px;
-    left: -151px;
-    text-align: left;
+    top: 1777px;
+    left: -528px;
+    width: 1000px;
+    text-align: center;
     color: #041D38;
 }
 
@@ -1505,11 +1506,7 @@ body {
 }
 
 .winning-cup img {
-    width: 100px; 
-    height: auto;
-    transform: perspective(1000px) rotateY(0deg);
-    transition: transform 0.5s;
-    animation: bumping 2s infinite; 
+    display: none;
 }
 
 .winning-cup img:hover {
