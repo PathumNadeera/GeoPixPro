@@ -863,7 +863,7 @@ hr {
     }
 
     .link-hedding, .services-hedding {
-        display: none; /* Hide headings */
+        display: none;
     }
 
     .email-subscription{
@@ -922,6 +922,40 @@ hr {
 }
 
 
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .background-img {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        width: 124%;
+    }
+
+    .contact-form {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        width: 576px;
+    }
+
+
+
+    .footer-background {
+        width: 124%;
+        position: absolute;
+        top: 20px;
+    }
+
+    .footer-container {
+        position: relative;
+        bottom: -380px;
+        display: block;
+    }
+    
+}
 
 
 

@@ -1508,3 +1508,24 @@ hr {
 
 
 }
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .background-img img {
+        width: 100%;
+    }
+    .background-img {
+        overflow: hidden;
+        width: 124%;
+    }
+
+    .full-width-card {
+        width: 124%;
+        top: 433px;
+    }
+    
+
+
+}

@@ -1804,3 +1804,67 @@ hr {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .background-img {
+        width: 124%;
+    }
+
+    .background-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .full-width-card-2 {
+        top: 825px;
+        position: absolute;
+        width: 1487px;
+    }
+
+    .footer-background {
+        width: 124%;
+        position: absolute;
+        top: 20px;
+    }
+
+    .footer-container {
+        position: relative;
+        bottom: -870px;
+        display: block;
+    }
+
+    .vacancy-message {
+        top: 372px;
+        font-size: 20px;
+        margin-left: 457px;
+    }
+
+    .text-content h1 {
+        position: relative;
+        left: -78px;
+    }
+    .text-content p {
+        position: relative;
+        left: -85px;
+    }
+    
+
+
+
+}

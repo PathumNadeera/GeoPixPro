@@ -2534,3 +2534,66 @@ hr {
 
     
 }
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .footer-background {
+        width: 124%;
+        position: absolute;
+        top: 20px;
+    }
+
+    .footer-container {
+        position: relative;
+        bottom: -160px;
+        display: block;
+    }
+    
+    .vec-6,.vec-7{
+        display: none;
+    }
+
+    .Vector img {
+        z-index: 1000;
+        width: 124%;
+    }
+
+    .background-img {
+        width: 124%;
+    }
+
+    .service-description {
+        width: 50%;
+        margin-left: auto;
+        transform: translateY(-1000px);
+        padding: 40px;
+        box-sizing: border-box;
+        position: relative;
+        top: 33px;
+        margin-left: 760px;
+    }
+
+    .background-3-img {
+        width: 124%;
+    }
+
+    .full-width-card-2 {
+        width: 125%;
+        top: 3243px;
+    }
+
+    .Section-6 {
+        width: 50%;
+        transform: translateY(-1000px);
+        position: relative;
+        top: -239px;
+        margin-left: 687px;
+    }
+
+    .full-width-card {
+        width: 124%;
+    }
+
+}
